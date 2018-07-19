@@ -1,11 +1,16 @@
-ul{
-    
+/* font-family: 'Knewave', cursive;
+font-family: 'Roboto Condensed', sans-serif; */
+h1 {
+    font-family: 'Knewave', cursive;
+}
+li{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 li a {
     color: black;
     font-size: 2em;
     text-decoration: none;
-
+    font-family: 'Roboto Condensed', sans-serif;
 }
 body {
     background: white url("images/background.gif") no-repeat;
