@@ -3,9 +3,9 @@
 <link href="https://fonts.googleapis.com/css?family=Knewave|Roboto+Condensed" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static 'history/song.css' %}" />
 
-<h1>{{ question.artist_name }}</h1>
+<h1>{{ artist.artist_name }}</h1>
 <ul>
-{% for choice in question.song_set.all %}
-    <li>{{ choice.song_text }}</li>
+{% for song in artist.song_set.all %}
+    <li>{{ song.song_text }}</li>
 {% endfor %}
 </ul>

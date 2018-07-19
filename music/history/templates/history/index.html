@@ -3,10 +3,10 @@
 <link href="https://fonts.googleapis.com/css?family=Knewave|Roboto+Condensed" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static 'history/style.css' %}" />
 
-{% if latest_question_list %}
+{% if artist_list %}
     <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/history/{{ question.id }}/">{{ question.artist_name }}</a></li>
+    {% for artist in artist_list %}
+        <li><a href="/history/{{ artist.id }}/">{{ artist.artist_name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
