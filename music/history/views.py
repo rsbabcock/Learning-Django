@@ -10,7 +10,7 @@ def index(request):
     context = {'latest_question_list': latest_question_list}
     return render(request, 'history/index.html', context)
 
-# Leave the rest of the views (detail, results, vote) unchanged
+# gets the details of artist including their song
 def artist(request, artist_id):
     try:
         question = Artist.objects.get(pk=artist_id)
@@ -18,9 +18,4 @@ def artist(request, artist_id):
         raise Http404("Artist does not exist")
     return render(request, 'history/songs.html', {'question': question})
 
-def songs(request, artist_id):
-    try:
-        question = Artist.objects.get(pk=question_id)
-    except Artist.DoesNotExist:
-        raise Http404("Artist does not exist")
-    return render(request, 'history/songs.html', {'question': question})
+

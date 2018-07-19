@@ -8,5 +8,5 @@ urlpatterns = [
     # ex: /polls/5/
     path('<int:artist_id>/', views.artist, name='artist'),
     # ex: /polls/5/results/
-    path('<int:artist_id>/song/', views.songs, name='songs'),
+    # path('<int:artist_id>/song/', views.songs, name='songs'),
 ]
