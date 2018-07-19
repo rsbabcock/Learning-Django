@@ -1,0 +1,6 @@
+<h1>{{ question.artist_name }}</h1>
+<ul>
+{% for choice in question.song_set.all %}
+    <li>{{ choice.song_text }}</li>
+{% endfor %}
+</ul>
