@@ -1,3 +1,15 @@
+
+li {
+    list-style-type: none;
+    list-style: none;
+}
+
 li a {
-    color: green;
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 2%;
+}
+body {
+    background: white url("images/background.gif") no-repeat;
 }
