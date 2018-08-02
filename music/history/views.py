@@ -18,4 +18,12 @@ def artist(request, artist_id):
         raise Http404("Artist does not exist")
     return render(request, 'history/songs.html', {'artist': artist})
 
+def song_view(request, album_id):
+    try:
+        album = Album.objects.get(pk=album_id)
+    except Album.DoesNotExist:
+        raise Http404("Album Detail does not exist")
+    return render(request, 'history/collection_list.html', {'album': album})
+  
+
 

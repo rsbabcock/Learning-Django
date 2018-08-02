@@ -1,0 +1,13 @@
+{% extends "songs.html" %} 
+
+{% block content %}
+
+<h2>Song List</h2>
+<!-- <h2>{{view.message.header|upper}}</h2> -->
+<ul>
+    {% for album in album.song_set.all %}
+    <li>{{ album.song_title }}</li>
+    {% endfor %}
+</ul>
+    {% endif %} 
+{% endblock %}

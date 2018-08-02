@@ -4,8 +4,15 @@
 <link rel="stylesheet" type="text/css" href="{% static 'history/song.css' %}" />
 
 <h1>{{ artist.artist_name }}</h1>
+<h3>Albums</h3>
+
+{% block content %}
+
 <ul>
-{% for song in artist.song_set.all %}
-    <li>{{ song.song_text }}</li>
-{% endfor %}
+    {% for album in artist.album_set.all %}
+    <!-- <li>{{ album.album_name }}</li> -->
+    <li><a href="/history/{{ album.id }}/">{{ album.album_name }}</a></li>
+    {% endfor %}
 </ul>
+
+{% endblock %}
