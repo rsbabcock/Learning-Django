@@ -12,6 +12,7 @@ def index(request):
 
 # gets the details of artist including their song
 def artist(request, artist_id):
+    print(artist_id)
     try:
         artist = Artist.objects.get(pk=artist_id)
     except Artist.DoesNotExist:
@@ -19,6 +20,7 @@ def artist(request, artist_id):
     return render(request, 'history/songs.html', {'artist': artist})
 
 def song_view(request, album_id):
+    print(album_id)
     try:
         album = Album.objects.get(pk=album_id)
     except Album.DoesNotExist:

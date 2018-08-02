@@ -6,13 +6,13 @@
 <h1>{{ artist.artist_name }}</h1>
 <h3>Albums</h3>
 
-{% block content %}
+<!-- {% block content %} -->
 
 <ul>
     {% for album in artist.album_set.all %}
     <!-- <li>{{ album.album_name }}</li> -->
-    <li><a href="/history/{{ album.id }}/">{{ album.album_name }}</a></li>
+    <li><a href="/{{ album.id }}/">{{ album.album_name }}</a></li>
     {% endfor %}
 </ul>
 
-{% endblock %}
+<!-- {% endblock %} -->
