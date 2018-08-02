@@ -1,12 +1,10 @@
-{% load static %}
+{% extends "history/index.html" %}
 
-<link href="https://fonts.googleapis.com/css?family=Knewave|Roboto+Condensed" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="{% static 'history/song.css' %}" />
+{% block content %}
+
 
 <h1>{{ artist.artist_name }}</h1>
 <h3>Albums</h3>
-
-<!-- {% block content %} -->
 
 <ul>
     {% for album in artist.album_set.all %}
@@ -15,4 +13,4 @@
     {% endfor %}
 </ul>
 
-<!-- {% endblock %} -->
+{% endblock %}

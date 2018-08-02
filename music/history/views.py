@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
 
-from .models import Artist
+from .models import Artist, Album
 
 
 def index(request):
@@ -19,7 +19,7 @@ def artist(request, artist_id):
         raise Http404("Artist does not exist")
     return render(request, 'history/songs.html', {'artist': artist})
 
-def song_view(request, album_id):
+def song_view(request, artist_id, album_id):
     print(album_id)
     try:
         album = Album.objects.get(pk=album_id)

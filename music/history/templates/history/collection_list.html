@@ -1,7 +1,9 @@
-<!-- {% extends "songs.html" %}  -->
+{% extends "history/index.html"%}
 
-<!-- {% block content %} -->
+{% block content %}
 
+
+<h1>{{ artist.artist_name }}</h1>
 <h2>Song List</h2>
 <!-- <h2>{{view.message.header|upper}}</h2> -->
 <ul>
@@ -9,5 +11,4 @@
     <li>{{ album.song_title }}</li>
     {% endfor %}
 </ul>
-    {% endif %} 
-<!-- {% endblock %} -->
+    {% endblock %}
