@@ -11,7 +11,7 @@
 <ul>
     {% for album in artist.album_set.all %}
     <!-- <li>{{ album.album_name }}</li> -->
-    <li><a href="/{{ album.id }}/">{{ album.album_name }}</a></li>
+    <li><a href="album/{{ album.id }}/">{{ album.album_name }}</a></li>
     {% endfor %}
 </ul>
 
