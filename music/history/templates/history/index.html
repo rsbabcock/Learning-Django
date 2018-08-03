@@ -13,8 +13,18 @@
         <li><a href="/history/{{ artist.id }}/">{{ artist.artist_name }}</a></li>
     {% endfor %}
     </ul>
+    
+    <h3>Add a new artist to your collection</h3>
+
+    <form method='post'>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Save Artist">
+    </form>
+
 {% else %}
     <p>No artists are available.</p>
 {% endif %}
 
 {% endblock%}
+

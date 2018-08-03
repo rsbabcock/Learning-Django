@@ -1,6 +1,9 @@
 /* font-family: 'Knewave', cursive;
 font-family: 'Roboto Condensed', sans-serif; */
 
+h1, h2, h3, h4 {
+    font-family: 'Knewave', cursive;
+}
 li {
     list-style-type: none;
     list-style: none;
